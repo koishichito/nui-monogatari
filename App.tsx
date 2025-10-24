@@ -182,8 +182,9 @@ const App: React.FC = () => {
   }, [endingType]);
 
   const getBackgroundImage = () => {
-    if (gameState === 'ending' && endingType === 'good') return 'https://picsum.photos/seed/garden/1920/1080';
-    return './tpo-chart.jpg';
+    if (gameState === 'ending' && endingType === 'good') return './images/家族写真1.jpg';
+    if (gameState === 'statue_tour') return './images/集合写真.jpg';
+    return './images/家族写真昭和.jpg';
   };
 
   const getSceneImage = () => {
@@ -191,9 +192,9 @@ const App: React.FC = () => {
         return STATUES[currentStatueIndex].image;
     }
      if (gameState === 'ending' && endingType === 'good') {
-        return 'https://picsum.photos/seed/magic/800/600';
+        return './images/家族写真1.jpg';
     }
-    return 'https://picsum.photos/seed/restaurant/800/600';
+    return './images/家族写真昭和.jpg';
   }
 
   return (
